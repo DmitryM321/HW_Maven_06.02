@@ -10,6 +10,6 @@ public interface EmployeeDAO {
     void create(Employee employee);
     Employee readById(int id) throws SQLException;
     List<Employee> readAll();
-    void deleteById(int id);
-    void updateById(int id, int age) throws SQLException;
+    void deleteById(Employee employee);
+    void update(Employee employee) throws SQLException;
 }

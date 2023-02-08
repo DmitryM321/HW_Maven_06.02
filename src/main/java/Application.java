@@ -9,47 +9,33 @@ import java.util.List;
 
 public class Application {
     public static void main(String[] args) throws SQLException {
-        final String user = "postgres";
-        final String password = "8363";
-        final String url = "jdbc:postgresql://localhost:5432/skypro";
+        EmployeeDAO employeeDAO = new EmployeeDAOImpl();
 
-        try (Connection connection = DriverManager.getConnection(url, user, password)) {
-            EmployeeDAO employeeDAO = new EmployeeDAOImpl(connection);
-// метод 5
-//            employeeDAO.deleteById(8);
-
-//метод 4
-            employeeDAO.updateById(7, 28);
-// метод 3
-            List<Employee> employees = employeeDAO.readAll();
-            for (Employee emp : employees) {
-                System.out.println(emp);
-// метод 2
-                System.out.println(employeeDAO.readById(2));
-// метод 1
-                City city1 = new City(2, "Rio");
-                Employee employee1 = new Employee("ЗавКультОтд", "Вяземская", "f", 25, city1);
-                employeeDAO.create(employee1);
-// Задание 1 - 4
-//        try (final Connection connection = DriverManager.getConnection(url, user, password);
+////      метод 5
+//        Employee employee2 = new Employee(27, "Poligraf","Sharikov", "m" ,27,3);
+//         employeeDAO.deleteById(employee2);
 //
-//             PreparedStatement statement = connection.prepareStatement(
-//                     "SELECT * FROM employee WHERE id = (?)")) {
-//            statement.setInt(1, 3);
-//            final ResultSet resultSet = statement.executeQuery();
-//            while (resultSet.next()) {
-//                String first_name = "First_name "  + resultSet.getString("first_name");
-//                String last_name = "Last_name "  + resultSet.getString("last_name");
-//                String gender = "Gender "  + resultSet.getString("gender");
-//                String city = "City "  + resultSet.getInt("city_id");
-//                System.out.println(first_name);
-//                System.out.println(last_name);
-//                System.out.println(gender);
-//                System.out.println(city);
-
-
-            }
-        }
+////      метод 4 update
+//        Employee employee3 = new Employee(3, "Darya", "Ivanova", "f", 24, 5);
+//         employeeDAO.update(employee3);
+//
+////     метод 3 readALL
+//        List<Employee> employees = employeeDAO.readAll();
+//         for (Employee empl : employees) {
+//            System.out.println(empl);
+////     метод 2 readById(int id)
+//         System.out.println(employeeDAO.readById(1));
+//
+////     метод 1 create(Employee employee)
+//        Employee employee1 = new Employee("Poligraf", "Sharikov", "m", 27, 3);
+//        employeeDAO.create(employee1);
     }
 }
+
+
+
+
+
+
+
 
