@@ -1,3 +1,5 @@
+import dao.CityDAO;
+import dao.CityDAOImpl;
 import dao.EmployeeDAO;
 import dao.EmployeeDAOImpl;
 import model.City;
@@ -10,31 +12,33 @@ import java.util.List;
 public class Application {
     public static void main(String[] args) throws SQLException {
         EmployeeDAO employeeDAO = new EmployeeDAOImpl();
+        CityDAO cityDAO = new CityDAOImpl();
 
-////      метод 5
-//        Employee employee2 = new Employee(27, "Poligraf","Sharikov", "m" ,27,3);
-//         employeeDAO.deleteById(employee2);
-//
+// метод 5 deleteById
+//          City city4 = cityDAO.readById(7);
+//          cityDAO.deleteById(cityDAO.readById(7));
+
 ////      метод 4 update
-//        Employee employee3 = new Employee(3, "Darya", "Ivanova", "f", 24, 5);
-//         employeeDAO.update(employee3);
-//
-////     метод 3 readALL
-//        List<Employee> employees = employeeDAO.readAll();
-//         for (Employee empl : employees) {
-//            System.out.println(empl);
-////     метод 2 readById(int id)
-//         System.out.println(employeeDAO.readById(1));
-//
-////     метод 1 create(Employee employee)
-//        Employee employee1 = new Employee("Poligraf", "Sharikov", "m", 27, 3);
+//        City city4 = new City(7, "Улан-Батор" );
+//         cityDAO.update(city4);
+
+//        метод 3 readAll
+//        List<City> cities = cityDAO.readAll();
+//        for (City city : cities) {
+//            System.out.println(city);
+
+//      метод 2 readById
+//         Employee employee1 = new Employee("Фёдор", "Швейар", "m", 55);
+//        City city2 = cityDAO.readById(2);
+//        employee1.setCity_name(city2);
 //        employeeDAO.create(employee1);
+
+//      метод 1 create(city1)
+//        City city1 = new City("Kizhi");
+//        cityDAO.create(city1);
+
+        }
     }
-}
-
-
-
-
 
 
 
